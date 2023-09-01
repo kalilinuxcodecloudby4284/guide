@@ -1,0 +1,35 @@
+//sudo su// kodi orqli root huquqi ishlatib olinadi
+//apt-get update// yoki //apt-get update// yangilanadi
+
+
+/* anonimlik 1-bosqich 1-usul */
+
+"etc/proxychains4.conf" papka ichiga kirib kodi to'g'irlanadi:
+	"dynamic_chain" ishlatilib,
+	"strict_chain" to'xtatiladi,
+//apt install tor// yoki //apt-get install tor// tor yuklanadi
+//service tor || start || stautus || restart || stop // ishlatilsa ip adres o'zgartiriladi
+
+
+/* anonimlik 1-bosqich 2-usul */
+
+"https://github.com/kalilinuxcodecloudby4284/kali_anonsurf" yoki "git clone https://github.com/Und3rf10w/kali-anonsurf" yuklandi:
+	yuklangan fayl ichiga kirib installer.sh //./installer.sh// qilib o'rnatiladi,
+//anonsurf start || status || restart || stop || myip // ishlatilsa ip adres o'zgartiriladi
+	
+
+/* anonimlik 2-bosqich */
+"etc/resolv.conf" faylidagi iplar tekshiriladi
+//apt install resolvconf// yoki //apt-get install resolvconf// resolvconf yuklanadi
+//systemctl enable resolvconf// yuklanganligi tekshiriladi
+"etc/resolv.conf.d" fayli ichiga "base" nomi bilan fayl yaratiladi:
+	yoziladi"
+	/*
+	nameserver 1.1.1.1
+	nameserver 8.8.8.8
+	nameserver 8.8.4.4
+	*/
+//systemctl start || status || restart || stop // buyruqlari bilan "resolvconf || NetworkManager" ishlatiladi
+"etc/network/interface" fayliga o'tib:
+	"dns-nameserver 1.1.1.1 8.8.8.8 8.8.4.4" yoziladi
+*/ bu tarmoqdagi ipni bekitish /*
