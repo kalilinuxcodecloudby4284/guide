@@ -2,6 +2,7 @@
 //apt-get update// yoki //apt-get update// yangilanadi
 
 
+
 /* anonimlik 1-bosqich 1-usul */
 
 "etc/proxychains4.conf" papka ichiga kirib kodi to'g'irlanadi:
@@ -11,6 +12,7 @@
 //service tor || start || stautus || restart || stop // ishlatilsa ip adres o'zgartiriladi
 
 
+
 /* anonimlik 1-bosqich 2-usul */
 
 "https://github.com/kalilinuxcodecloudby4284/kali_anonsurf" yoki "git clone https://github.com/Und3rf10w/kali-anonsurf" yuklandi:
@@ -18,12 +20,13 @@
 //anonsurf start || status || restart || stop || myip // ishlatilsa ip adres o'zgartiriladi
 	
 
-/* anonimlik 2-bosqich */
-"etc/resolv.conf" faylidagi iplar tekshiriladi
+
+/* anonimlik 2-bosqich 1-usul */
+"etc/resolv.conf" faylidagi IP lar tekshiriladi
 //apt install resolvconf// yoki //apt-get install resolvconf// resolvconf yuklanadi
 //systemctl enable resolvconf// yuklanganligi tekshiriladi
 "etc/resolv.conf.d" fayli ichiga "base" nomi bilan fayl yaratiladi:
-	yoziladi"
+	yoziladi
 	/*
 	nameserver 1.1.1.1
 	nameserver 8.8.8.8
@@ -33,3 +36,18 @@
 "etc/network/interface" fayliga o'tib:
 	"dns-nameserver 1.1.1.1 8.8.8.8 8.8.4.4" yoziladi
 */ bu tarmoqdagi ipni bekitish /*
+
+
+
+/* anonimlik 2-bosqich 2-usul */
+"etc/resolv.conf" fayli ochilib:
+	birinchi IP ni o'rniga boshqa 2ta IP qo'shiladi
+//systemctl start || status || restart || stop // buyruqlari bilan "resolvconf || NetworkManager" ishlatiladi
+//apt install openvpn// yoki //apt-get install openvpn// open vpn yuklanadi
+"https://www.vpnbook.com" saytidan open vpn bo'limiga o'tib birorta davlatni vpni yuklanadi va sahifadan chiqmagan holda terminalga o'tiladi
+yuklangan fayl zipdan chiqariladi
+terminalda yuklangan fayllar joylashgan joyga o'ladi
+//openvpn "birinchi fayl yoziladi"// vpn o'rnatiladi:
+	so'ralgan username va passwordga yuqoridagi sahifadagi usernamelar kiritiladi
+<!= MUHIM ESLATMA: BIZ DAVLAT ISHLATAYOTGAN VPNDAGI DAVLAT XODIMLARI, KIBR XAVFSIZLIK ISHCHILARI VA VPN YARATUVCHISI BIZNI KUZATISHI MUMKUN. ALBATT BOSHQALAR UCHUN 100% ANONIMMIZ =!>
+
