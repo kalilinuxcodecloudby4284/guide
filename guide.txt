@@ -8,6 +8,7 @@
 "etc/proxychains4.conf" papka ichiga kirib kodi to'g'irlanadi:
 	"dynamic_chain" ishlatilib,
 	"strict_chain" to'xtatiladi,
+"socks5  127.0.0.1 9050
 //apt install tor// yoki //apt-get install tor// tor yuklanadi
 //service tor || start || stautus || restart || stop // ishlatilsa ip adres o'zgartiriladi
 
